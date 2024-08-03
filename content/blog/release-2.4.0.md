@@ -64,7 +64,7 @@ see the [provider](https://qbs.io//docs/qml-qbsmoduleproviders-conan/) page in t
 
 ### Other changes
 * We've added new FlatBuffers modules, for [C](https://qbs.io//docs/qml-qbsmodules-flatbuf-c/)
-  and [C++](https://qbs.io//docs/qml-qbsmodules-flatbuf-cpp/) languages. Those modules require
+  and [C++](https://qbs.io//docs/qml-qbsmodules-flatbuf-cpp/) languages. These modules require
   runtime dependencies that can be installed using Conan module provider
   ([QBS-1666](https://bugreports.qt.io/projects/QBS/issues/QBS-1666)).
 * Rules trying to create artifacts outside the build directory is now a hard error
@@ -74,8 +74,8 @@ see the [provider](https://qbs.io//docs/qml-qbsmoduleproviders-conan/) page in t
 * Updated the bundled quickjs library.
 * The pkg-config based fallback provider was removed. That provider was not flexible enough and
   didn't give users control over providers priorities. Also, that provider created files
-  even for non-present modules which was inful in case of misconfiguration since those files
-  had to be cneaned up manually.
+  even for non-present modules which also happens in case of misconfiguration. This was
+  inconvinient since those files had to be cleaned up manually.
 * It is no longer allowed to attach a QML `id` to a module item. This feature violated various
   preconditions and triggered asserts in debug builds of Qbs. Please update you modules and remove
   usages of `id` property. You can replace it with the raw `propertyName` in module context, with
@@ -125,7 +125,7 @@ away. But also new features are very welcome. Your patches will be automatically
 sanity-checked, built and verified on Linux, macOS and Windows by our CI bot.
 Get started with instructions in the [Qbs Wiki](https://wiki.qt.io/Qbs).
 
-Thanks to everybody who made the 2.3 release happen:
+Thanks to everybody who made the 2.4 release happen:
 
 * Christian Kandeler
 * Ivan Komissarov
