@@ -75,7 +75,7 @@ see the [provider](https://qbs.io//docs/qml-qbsmoduleproviders-conan/) page in t
 * The pkg-config based fallback provider was removed. That provider was not flexible enough and
   didn't give users control over providers priorities. Also, that provider created files
   even for non-present modules which also happens in case of misconfiguration. This was
-  inconvinient since those files had to be cleaned up manually.
+  inconvenient since those files had to be cleaned up manually.
 * It is no longer allowed to attach a QML `id` to a module item. This feature violated various
   preconditions and triggered asserts in debug builds of Qbs. Please update you modules and remove
   usages of `id` property. You can replace it with the raw `propertyName` in module context, with
